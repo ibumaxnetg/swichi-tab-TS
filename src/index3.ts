@@ -1,15 +1,15 @@
 class tabSwitchClass {
-  tabTempElement: HTMLElement;
+  tabTempElement: HTMLTemplateElement;
   editElement: HTMLElement;
   outputElement: HTMLElement;
   changeSwitchTab: NodeListOf<HTMLLIElement>;
   changeSwitchContent: NodeListOf<HTMLDialogElement>;
 
   constructor(tabClass: string) {
-    this.tabTempElement = document.querySelector(
-      `.${tabClass}`
-    )! as HTMLElement;
-    const nodeElement = document.importNode(this.tabTempElement, true);
+    this.tabTempElement = document.getElementById(
+      "tab-template"
+    )! as HTMLTemplateElement;
+    const nodeElement = document.importNode(this.tabTempElement.content, true);
     this.editElement = nodeElement.firstElementChild as HTMLElement;
 
     this.outputElement = document.getElementById("app")! as HTMLDivElement;
@@ -47,4 +47,4 @@ class tabSwitchClass {
   }
 }
 
-new tabSwitchClass("search_area");
+new tabSwitchClass("wrap-tab");
