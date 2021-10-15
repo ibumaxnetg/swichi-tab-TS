@@ -3,25 +3,27 @@ class tabSwitchClass {
   editElement: HTMLElement;
   outputElement: HTMLElement;
   changeSwitchTab: NodeListOf<HTMLLIElement>;
-  changeSwitchContent: NodeListOf<HTMLDialogElement>;
+  changeSwitchContent: NodeListOf<HTMLElement>;
 
   constructor(tabClass: string) {
     this.tabTempElement = document.querySelector(
       `.${tabClass}`
     )! as HTMLElement;
+    // console.log(this.tabTempElement);
     const nodeElement = document.importNode(this.tabTempElement, true);
-    this.editElement = nodeElement.firstElementChild as HTMLElement;
+    this.editElement = nodeElement as HTMLElement;
+    // console.log(this.editElement);
 
     this.outputElement = document.getElementById("app")! as HTMLDivElement;
 
-    this.changeSwitchTab = this.editElement.querySelectorAll("li");
+    this.changeSwitchTab = this.editElement.querySelectorAll(".list-tab li");
     this.changeSwitchContent = this.editElement.querySelectorAll(
       ".tab-content"
     );
 
-    this.changeSwitchTab.forEach((tabSwitch, index) => {
-      // tabSwitch.addEventListener("click", {indexNum: index, handleEvent: this.tabChange});
-      tabSwitch.addEventListener("click", this.tabChange.bind(this));
+    this.changeSwitchTab.forEach((tab, index) => {
+      // console.log(tab);
+      tab.addEventListener("click", this.tabChange.bind(this));
     });
 
     // console.log(this.changeSwitchContent);
@@ -43,8 +45,10 @@ class tabSwitchClass {
   }
 
   attach() {
+    this.tabTempElement.innerHTML = "";
     this.outputElement.insertAdjacentElement("afterbegin", this.editElement);
+    console.log(this.outputElement);
   }
 }
 
-new tabSwitchClass("search_area");
+new tabSwitchClass("wrap-tab");

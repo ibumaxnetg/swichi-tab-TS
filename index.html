@@ -19,7 +19,335 @@
       
                 <!--  エリア選択 -->
                 <nav>
-      <div class="search_area">
+
+<div class="wrap-tab">
+  <ul id="js-tab" class="list-tab">
+    <li class="active">東京都</li>
+    <li>神奈川県</li>
+    <li>埼玉県</li>
+    <li>千葉県</li>
+  </ul>
+
+  <div class="wrap-tab-content">
+    <div class="tab-content active">
+      <div>
+        <ul class="accordion">
+              <!-- <li><div class="menu"><h3 class="title"><span>東京都の地域で選ぶ</span></h3><span class="icon"></span></div> -->
+              <ul class="subMenu_grid">
+              <li class="subttl"><h4 class="title">23区</h4></li>
+            
+              <li><input type="checkbox" name="areaid[]" value="131016" />千代田区</li>
+              <li><input type="checkbox" name="areaid[]" value="131024" />中央区</li>
+              <li><input type="checkbox" name="areaid[]" value="131032" />港区</li>
+              <li><input type="checkbox" name="areaid[]" value="131041" />新宿区</li>
+              <li><input type="checkbox" name="areaid[]" value="131059" />文京区</li>
+              <li><input type="checkbox" name="areaid[]" value="131067" />台東区</li>
+              <li><input type="checkbox" name="areaid[]" value="131075" />墨田区</li>
+              <li><input type="checkbox" name="areaid[]" value="131083" />江東区</li>
+              <li><input type="checkbox" name="areaid[]" value="131091" />品川区</li>
+              <li><input type="checkbox" name="areaid[]" value="131105" />目黒区</li>
+              <li><input type="checkbox" name="areaid[]" value="131113" />大田区</li>
+              <li><input type="checkbox" name="areaid[]" value="131121" />世田谷区</li>
+              <li><input type="checkbox" name="areaid[]" value="131130" />渋谷区</li>
+              <li><input type="checkbox" name="areaid[]" value="131148" />中野区</li>
+              <li><input type="checkbox" name="areaid[]" value="131156" />杉並区</li>
+              <li><input type="checkbox" name="areaid[]" value="131164" />豊島区</li>
+              <li><input type="checkbox" name="areaid[]" value="131172" />北区</li>
+              <li><input type="checkbox" name="areaid[]" value="131181" />荒川区</li>
+              <li><input type="checkbox" name="areaid[]" value="131199" />板橋区</li>
+              <li><input type="checkbox" name="areaid[]" value="131202" />練馬区</li>
+              <li><input type="checkbox" name="areaid[]" value="131211" />足立区</li>
+              <li><input type="checkbox" name="areaid[]" value="131229" />葛飾区</li>
+              <li><input type="checkbox" name="areaid[]" value="131237" />江戸川区</li>
+            
+              <li class="subttl"><h4 class="title">市町村</h4></li>
+            
+              <li><input type="checkbox" name="areaid[]" value="132012" />八王子市</li>
+              <li><input type="checkbox" name="areaid[]" value="132021" />立川市</li>
+              <li><input type="checkbox" name="areaid[]" value="132039" />武蔵野市</li>
+              <li><input type="checkbox" name="areaid[]" value="132047" />三鷹市</li>
+              <li><input type="checkbox" name="areaid[]" value="132055" />青梅市</li>
+              <li><input type="checkbox" name="areaid[]" value="132063" />府中市</li>
+              <li><input type="checkbox" name="areaid[]" value="132071" />昭島市</li>
+              <li><input type="checkbox" name="areaid[]" value="132080" />調布市</li>
+              <li><input type="checkbox" name="areaid[]" value="132098" />町田市</li>
+              <li><input type="checkbox" name="areaid[]" value="132101" />小金井市</li>
+              <li><input type="checkbox" name="areaid[]" value="132110" />小平市</li>
+              <li><input type="checkbox" name="areaid[]" value="132128" />日野市</li>
+              <li><input type="checkbox" name="areaid[]" value="132136" />東村山市</li>
+              <li><input type="checkbox" name="areaid[]" value="132144" />国分寺市</li>
+              <li><input type="checkbox" name="areaid[]" value="132152" />国立市</li>
+              <li><input type="checkbox" name="areaid[]" value="132187" />福生市</li>
+              <li><input type="checkbox" name="areaid[]" value="132195" />狛江市</li>
+              <li><input type="checkbox" name="areaid[]" value="132209" />東大和市</li>
+              <li><input type="checkbox" name="areaid[]" value="132217" />清瀬市</li>
+              <li><input type="checkbox" name="areaid[]" value="132225" />東久留米市</li>
+              <li><input type="checkbox" name="areaid[]" value="132233" />武蔵村山市</li>
+              <li><input type="checkbox" name="areaid[]" value="132241" />多摩市</li>
+              <li><input type="checkbox" name="areaid[]" value="132250" />稲城市</li>
+              <li><input type="checkbox" name="areaid[]" value="132276" />羽村市</li>
+              <li><input type="checkbox" name="areaid[]" value="132284" />あきる野市</li>
+              <li><input type="checkbox" name="areaid[]" value="132292" />西東京市</li>
+              <li><input type="checkbox" name="areaid[]" value="133035" />瑞穂町</li>
+              <li><input type="checkbox" name="areaid[]" value="133051" />日の出町</li>
+              <li><input type="checkbox" name="areaid[]" value="133078" />檜原村</li>
+              <li><input type="checkbox" name="areaid[]" value="133086" />奥多摩町</li>
+              <li><input type="checkbox" name="areaid[]" value="133612" />大島町</li>
+              <li><input type="checkbox" name="areaid[]" value="133621" />利島村</li>
+              <li><input type="checkbox" name="areaid[]" value="133639" />新島村</li>
+              <li><input type="checkbox" name="areaid[]" value="133647" />神津島村</li>
+              <li><input type="checkbox" name="areaid[]" value="133817" />三宅村</li>
+              <li><input type="checkbox" name="areaid[]" value="133825" />御蔵島村</li>
+              <li><input type="checkbox" name="areaid[]" value="134015" />八丈町</li>
+              <li><input type="checkbox" name="areaid[]" value="134023" />青ヶ島村</li>
+              <li><input type="checkbox" name="areaid[]" value="134210" />小笠原村</li>
+            </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content">
+      <div>
+        <ul class="accordion">
+              <li><div class="menu"><h3 class="title"><span>神奈川県の地域で選ぶ</span></h3><span class="icon"></span></div>
+              <ul class="subMenu_grid">
+            <li class="subttl"><h4 class="title">横浜市&nbsp;<input type="checkbox" name="areaid[]" value="141003"  class="yhama_trigger" /></h4></li>
+              <li><input type="checkbox" name="areaid[]" value="141011"  class="yhama_area" />横浜市鶴見区</li>
+              <li><input type="checkbox" name="areaid[]" value="141020"  class="yhama_area" />横浜市神奈川区</li>
+              <li><input type="checkbox" name="areaid[]" value="141038"  class="yhama_area" />横浜市西区</li>
+              <li><input type="checkbox" name="areaid[]" value="141046"  class="yhama_area" />横浜市中区</li>
+              <li><input type="checkbox" name="areaid[]" value="141054"  class="yhama_area" />横浜市南区</li>
+              <li><input type="checkbox" name="areaid[]" value="141062"  class="yhama_area" />横浜市保土ケ谷区</li>
+              <li><input type="checkbox" name="areaid[]" value="141071"  class="yhama_area" />横浜市磯子区</li>
+              <li><input type="checkbox" name="areaid[]" value="141089"  class="yhama_area" />横浜市金沢区</li>
+              <li><input type="checkbox" name="areaid[]" value="141097"  class="yhama_area" />横浜市港北区</li>
+              <li><input type="checkbox" name="areaid[]" value="141101"  class="yhama_area" />横浜市戸塚区</li>
+              <li><input type="checkbox" name="areaid[]" value="141119"  class="yhama_area" />横浜市港南区</li>
+              <li><input type="checkbox" name="areaid[]" value="141127"  class="yhama_area" />横浜市旭区</li>
+              <li><input type="checkbox" name="areaid[]" value="141135"  class="yhama_area" />横浜市緑区</li>
+              <li><input type="checkbox" name="areaid[]" value="141143"  class="yhama_area" />横浜市瀬谷区</li>
+              <li><input type="checkbox" name="areaid[]" value="141151"  class="yhama_area" />横浜市栄区</li>
+              <li><input type="checkbox" name="areaid[]" value="141160"  class="yhama_area" />横浜市泉区</li>
+              <li><input type="checkbox" name="areaid[]" value="141178"  class="yhama_area" />横浜市青葉区</li>
+              <li><input type="checkbox" name="areaid[]" value="141186"  class="yhama_area" />横浜市都筑区</li>
+            
+            <li class="subttl"><h4 class="title">川崎市&nbsp;<input type="checkbox" name="areaid[]" value="141305"  class="kwsaki_trigger" /></h4></li>
+              <li><input type="checkbox" name="areaid[]" value="141313"  class="kwsaki_area" />川崎市川崎区</li>
+              <li><input type="checkbox" name="areaid[]" value="141321"  class="kwsaki_area" />川崎市幸区</li>
+              <li><input type="checkbox" name="areaid[]" value="141330"  class="kwsaki_area" />川崎市中原区</li>
+              <li><input type="checkbox" name="areaid[]" value="141348"  class="kwsaki_area" />川崎市高津区</li>
+              <li><input type="checkbox" name="areaid[]" value="141356"  class="kwsaki_area" />川崎市多摩区</li>
+              <li><input type="checkbox" name="areaid[]" value="141364"  class="kwsaki_area" />川崎市宮前区</li>
+              <li><input type="checkbox" name="areaid[]" value="141372"  class="kwsaki_area" />川崎市麻生区</li>
+            
+            <li class="subttl"><h4 class="title">相模原市&nbsp;<input type="checkbox" name="areaid[]" value="141500"  class="sgmhara_trigger" /></h4></li>
+              <li><input type="checkbox" name="areaid[]" value="141518"  class="sgmhara_area" />相模原市緑区</li>
+              <li><input type="checkbox" name="areaid[]" value="141526"  class="sgmhara_area" />相模原市中央区</li>
+              <li><input type="checkbox" name="areaid[]" value="141534"  class="sgmhara_area" />相模原市南区</li>
+            
+              <li class="subttl"><h4 class="title">市町村</h4></li>
+              <li><input type="checkbox" name="areaid[]" value="142018" />横須賀市</li>
+              <li><input type="checkbox" name="areaid[]" value="142034" />平塚市</li>
+              <li><input type="checkbox" name="areaid[]" value="142042" />鎌倉市</li>
+              <li><input type="checkbox" name="areaid[]" value="142051" />藤沢市</li>
+              <li><input type="checkbox" name="areaid[]" value="142069" />小田原市</li>
+              <li><input type="checkbox" name="areaid[]" value="142077" />茅ヶ崎市</li>
+              <li><input type="checkbox" name="areaid[]" value="142085" />逗子市</li>
+              <li><input type="checkbox" name="areaid[]" value="142107" />三浦市</li>
+              <li><input type="checkbox" name="areaid[]" value="142115" />秦野市</li>
+              <li><input type="checkbox" name="areaid[]" value="142123" />厚木市</li>
+              <li><input type="checkbox" name="areaid[]" value="142131" />大和市</li>
+              <li><input type="checkbox" name="areaid[]" value="142140" />伊勢原市</li>
+              <li><input type="checkbox" name="areaid[]" value="142158" />海老名市</li>
+              <li><input type="checkbox" name="areaid[]" value="142166" />座間市</li>
+              <li><input type="checkbox" name="areaid[]" value="142174" />南足柄市</li>
+              <li><input type="checkbox" name="areaid[]" value="142182" />綾瀬市</li>
+              <li><input type="checkbox" name="areaid[]" value="143014" />葉山町</li>
+              <li><input type="checkbox" name="areaid[]" value="143219" />寒川町</li>
+              <li><input type="checkbox" name="areaid[]" value="143413" />大磯町</li>
+              <li><input type="checkbox" name="areaid[]" value="143421" />二宮町</li>
+              <li><input type="checkbox" name="areaid[]" value="143618" />中井町</li>
+              <li><input type="checkbox" name="areaid[]" value="143626" />大井町</li>
+              <li><input type="checkbox" name="areaid[]" value="143634" />松田町</li>
+              <li><input type="checkbox" name="areaid[]" value="143642" />山北町</li>
+              <li><input type="checkbox" name="areaid[]" value="143669" />開成町</li>
+              <li><input type="checkbox" name="areaid[]" value="143821" />箱根町</li>
+              <li><input type="checkbox" name="areaid[]" value="143839" />真鶴町</li>
+              <li><input type="checkbox" name="areaid[]" value="143847" />湯河原町</li>
+              <li><input type="checkbox" name="areaid[]" value="144011" />愛川町</li>
+              <li><input type="checkbox" name="areaid[]" value="144029" />清川村</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content">
+      <div>
+        <ul class="accordion">
+          <li><div class="menu"><h3 class="title"><span>埼玉県 - 市区郡を選択</span></h3><span class="icon"></span></div>
+            <ul class="subMenu_grid">
+          
+          <li class="subttl"><h4 class="title">さいたま市&nbsp;<input type="checkbox" name="areaid[]" value="111007"  class="saitama_trigger" /></h4></li>
+            <li><input type="checkbox" name="areaid[]" value="111015"  class="saitama_area" />さいたま市西区</li>
+            <li><input type="checkbox" name="areaid[]" value="111023"  class="saitama_area" />さいたま市北区</li>
+            <li><input type="checkbox" name="areaid[]" value="111031"  class="saitama_area" />さいたま市大宮区</li>
+            <li><input type="checkbox" name="areaid[]" value="111040"  class="saitama_area" />さいたま市見沼区</li>
+            <li><input type="checkbox" name="areaid[]" value="111058"  class="saitama_area" />さいたま市中央区</li>
+            <li><input type="checkbox" name="areaid[]" value="111066"  class="saitama_area" />さいたま市桜区</li>
+            <li><input type="checkbox" name="areaid[]" value="111074"  class="saitama_area" />さいたま市浦和区</li>
+            <li><input type="checkbox" name="areaid[]" value="111082"  class="saitama_area" />さいたま市南区</li>
+            <li><input type="checkbox" name="areaid[]" value="111091"  class="saitama_area" />さいたま市緑区</li>
+            <li><input type="checkbox" name="areaid[]" value="111104"  class="saitama_area" />さいたま市岩槻区</li>
+          
+            <li class="subttl"><h4 class="title">市町村</h4></li>
+            <li><input type="checkbox" name="areaid[]" value="112011" />川越市</li>
+            <li><input type="checkbox" name="areaid[]" value="112020" />熊谷市</li>
+            <li><input type="checkbox" name="areaid[]" value="112038" />川口市</li>
+            <li><input type="checkbox" name="areaid[]" value="112062" />行田市</li>
+            <li><input type="checkbox" name="areaid[]" value="112071" />秩父市</li>
+            <li><input type="checkbox" name="areaid[]" value="112089" />所沢市</li>
+            <li><input type="checkbox" name="areaid[]" value="112097" />飯能市</li>
+            <li><input type="checkbox" name="areaid[]" value="112101" />加須市</li>
+            <li><input type="checkbox" name="areaid[]" value="112119" />本庄市</li>
+            <li><input type="checkbox" name="areaid[]" value="112127" />東松山市</li>
+            <li><input type="checkbox" name="areaid[]" value="112143" />春日部市</li>
+            <li><input type="checkbox" name="areaid[]" value="112151" />狭山市</li>
+            <li><input type="checkbox" name="areaid[]" value="112160" />羽生市</li>
+            <li><input type="checkbox" name="areaid[]" value="112178" />鴻巣市</li>
+            <li><input type="checkbox" name="areaid[]" value="112186" />深谷市</li>
+            <li><input type="checkbox" name="areaid[]" value="112194" />上尾市</li>
+            <li><input type="checkbox" name="areaid[]" value="112216" />草加市</li>
+            <li><input type="checkbox" name="areaid[]" value="112224" />越谷市</li>
+            <li><input type="checkbox" name="areaid[]" value="112232" />蕨市</li>
+            <li><input type="checkbox" name="areaid[]" value="112241" />戸田市</li>
+            <li><input type="checkbox" name="areaid[]" value="112259" />入間市</li>
+            <li><input type="checkbox" name="areaid[]" value="112275" />朝霞市</li>
+            <li><input type="checkbox" name="areaid[]" value="112283" />志木市</li>
+            <li><input type="checkbox" name="areaid[]" value="112291" />和光市</li>
+            <li><input type="checkbox" name="areaid[]" value="112305" />新座市</li>
+            <li><input type="checkbox" name="areaid[]" value="112313" />桶川市</li>
+            <li><input type="checkbox" name="areaid[]" value="112321" />久喜市</li>
+            <li><input type="checkbox" name="areaid[]" value="112330" />北本市</li>
+            <li><input type="checkbox" name="areaid[]" value="112348" />八潮市</li>
+            <li><input type="checkbox" name="areaid[]" value="112356" />富士見市</li>
+            <li><input type="checkbox" name="areaid[]" value="112372" />三郷市</li>
+            <li><input type="checkbox" name="areaid[]" value="112381" />蓮田市</li>
+            <li><input type="checkbox" name="areaid[]" value="112399" />坂戸市</li>
+            <li><input type="checkbox" name="areaid[]" value="112402" />幸手市</li>
+            <li><input type="checkbox" name="areaid[]" value="112411" />鶴ヶ島市</li>
+            <li><input type="checkbox" name="areaid[]" value="112429" />日高市</li>
+            <li><input type="checkbox" name="areaid[]" value="112437" />吉川市</li>
+            <li><input type="checkbox" name="areaid[]" value="112453" />ふじみ野市</li>
+            <li><input type="checkbox" name="areaid[]" value="112461" />白岡市</li>
+            <li><input type="checkbox" name="areaid[]" value="113018" />伊奈町</li>
+            <li><input type="checkbox" name="areaid[]" value="113247" />三芳町</li>
+            <li><input type="checkbox" name="areaid[]" value="113263" />毛呂山町</li>
+            <li><input type="checkbox" name="areaid[]" value="113271" />越生町</li>
+            <li><input type="checkbox" name="areaid[]" value="113417" />滑川町</li>
+            <li><input type="checkbox" name="areaid[]" value="113425" />嵐山町</li>
+            <li><input type="checkbox" name="areaid[]" value="113433" />小川町</li>
+            <li><input type="checkbox" name="areaid[]" value="113468" />川島町</li>
+            <li><input type="checkbox" name="areaid[]" value="113476" />吉見町</li>
+            <li><input type="checkbox" name="areaid[]" value="113484" />鳩山町</li>
+            <li><input type="checkbox" name="areaid[]" value="113492" />ときがわ町</li>
+            <li><input type="checkbox" name="areaid[]" value="113611" />横瀬町</li>
+            <li><input type="checkbox" name="areaid[]" value="113620" />皆野町</li>
+            <li><input type="checkbox" name="areaid[]" value="113638" />長瀞町</li>
+            <li><input type="checkbox" name="areaid[]" value="113654" />小鹿野町</li>
+            <li><input type="checkbox" name="areaid[]" value="113697" />東秩父村</li>
+            <li><input type="checkbox" name="areaid[]" value="113816" />美里町</li>
+            <li><input type="checkbox" name="areaid[]" value="113832" />神川町</li>
+            <li><input type="checkbox" name="areaid[]" value="113859" />上里町</li>
+            <li><input type="checkbox" name="areaid[]" value="114081" />寄居町</li>
+            <li><input type="checkbox" name="areaid[]" value="114421" />宮代町</li>
+            <li><input type="checkbox" name="areaid[]" value="114642" />杉戸町</li>
+            <li><input type="checkbox" name="areaid[]" value="114651" />松伏町</li>
+          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content">
+      <div>
+        <ul class="accordion">
+          <li><div class="menu"><h3 class="title"><span>千葉県 - 市区郡を選択</span></h3><span class="icon"></span></div>
+            <ul class="subMenu_grid">
+          
+          <li class="subttl"><h4 class="title">千葉市&nbsp;<input type="checkbox" name="areaid[]" value="121002"  class="chiba_trigger" /></h4></li>
+            <li><input type="checkbox" name="areaid[]" value="121011"  class="chiba_area" />千葉市中央区</li>
+            <li><input type="checkbox" name="areaid[]" value="121029"  class="chiba_area" />千葉市花見川区</li>
+            <li><input type="checkbox" name="areaid[]" value="121037"  class="chiba_area" />千葉市稲毛区</li>
+            <li><input type="checkbox" name="areaid[]" value="121045"  class="chiba_area" />千葉市若葉区</li>
+            <li><input type="checkbox" name="areaid[]" value="121053"  class="chiba_area" />千葉市緑区</li>
+            <li><input type="checkbox" name="areaid[]" value="121061"  class="chiba_area" />千葉市美浜区</li>
+          
+            <li class="subttl"><h4 class="title">そのほかの市町村部</h4></li>
+            <li><input type="checkbox" name="areaid[]" value="122025" />銚子市</li>
+            <li><input type="checkbox" name="areaid[]" value="122033" />市川市</li>
+            <li><input type="checkbox" name="areaid[]" value="122041" />船橋市</li>
+            <li><input type="checkbox" name="areaid[]" value="122050" />館山市</li>
+            <li><input type="checkbox" name="areaid[]" value="122068" />木更津市</li>
+            <li><input type="checkbox" name="areaid[]" value="122076" />松戸市</li>
+            <li><input type="checkbox" name="areaid[]" value="122084" />野田市</li>
+            <li><input type="checkbox" name="areaid[]" value="122106" />茂原市</li>
+            <li><input type="checkbox" name="areaid[]" value="122114" />成田市</li>
+            <li><input type="checkbox" name="areaid[]" value="122122" />佐倉市</li>
+            <li><input type="checkbox" name="areaid[]" value="122131" />東金市</li>
+            <li><input type="checkbox" name="areaid[]" value="122157" />旭市</li>
+            <li><input type="checkbox" name="areaid[]" value="122165" />習志野市</li>
+            <li><input type="checkbox" name="areaid[]" value="122173" />柏市</li>
+            <li><input type="checkbox" name="areaid[]" value="122181" />勝浦市</li>
+            <li><input type="checkbox" name="areaid[]" value="122190" />市原市</li>
+            <li><input type="checkbox" name="areaid[]" value="122203" />流山市</li>
+            <li><input type="checkbox" name="areaid[]" value="122211" />八千代市</li>
+            <li><input type="checkbox" name="areaid[]" value="122220" />我孫子市</li>
+            <li><input type="checkbox" name="areaid[]" value="122238" />鴨川市</li>
+            <li><input type="checkbox" name="areaid[]" value="122246" />鎌ケ谷市</li>
+            <li><input type="checkbox" name="areaid[]" value="122254" />君津市</li>
+            <li><input type="checkbox" name="areaid[]" value="122262" />富津市</li>
+            <li><input type="checkbox" name="areaid[]" value="122271" />浦安市</li>
+            <li><input type="checkbox" name="areaid[]" value="122289" />四街道市</li>
+            <li><input type="checkbox" name="areaid[]" value="122297" />袖ケ浦市</li>
+            <li><input type="checkbox" name="areaid[]" value="122301" />八街市</li>
+            <li><input type="checkbox" name="areaid[]" value="122319" />印西市</li>
+            <li><input type="checkbox" name="areaid[]" value="122327" />白井市</li>
+            <li><input type="checkbox" name="areaid[]" value="122335" />富里市</li>
+            <li><input type="checkbox" name="areaid[]" value="122343" />南房総市</li>
+            <li><input type="checkbox" name="areaid[]" value="122351" />匝瑳市</li>
+            <li><input type="checkbox" name="areaid[]" value="122360" />香取市</li>
+            <li><input type="checkbox" name="areaid[]" value="122378" />山武市</li>
+            <li><input type="checkbox" name="areaid[]" value="122386" />いすみ市</li>
+            <li><input type="checkbox" name="areaid[]" value="122394" />大網白里市</li>
+            <li><input type="checkbox" name="areaid[]" value="123226" />酒々井町</li>
+            <li><input type="checkbox" name="areaid[]" value="123293" />栄町</li>
+            <li><input type="checkbox" name="areaid[]" value="123421" />神崎町</li>
+            <li><input type="checkbox" name="areaid[]" value="123471" />多古町</li>
+            <li><input type="checkbox" name="areaid[]" value="123498" />東庄町</li>
+            <li><input type="checkbox" name="areaid[]" value="124036" />九十九里町</li>
+            <li><input type="checkbox" name="areaid[]" value="124095" />芝山町</li>
+            <li><input type="checkbox" name="areaid[]" value="124109" />横芝光町</li>
+            <li><input type="checkbox" name="areaid[]" value="124214" />一宮町</li>
+            <li><input type="checkbox" name="areaid[]" value="124222" />睦沢町</li>
+            <li><input type="checkbox" name="areaid[]" value="124231" />長生村</li>
+            <li><input type="checkbox" name="areaid[]" value="124249" />白子町</li>
+            <li><input type="checkbox" name="areaid[]" value="124265" />長柄町</li>
+            <li><input type="checkbox" name="areaid[]" value="124273" />長南町</li>
+            <li><input type="checkbox" name="areaid[]" value="124419" />大多喜町</li>
+            <li><input type="checkbox" name="areaid[]" value="124435" />御宿町</li>
+            <li><input type="checkbox" name="areaid[]" value="124630" />鋸南町</li>
+          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+                
+
+   <!--   <div class="search_area">
       <ul class="accordion">
         <li><div class="menu"><h3 class="title"><span>東京都の地域で選ぶ</span></h3><span class="icon"></span></div>
         <ul class="subMenu_grid">
@@ -327,7 +655,7 @@
       </li>
       </ul>
       </div>
-      
+      -->
       
                 </nav>
                 <!-- // エリア選択 -->
