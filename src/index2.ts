@@ -1,4 +1,6 @@
 class tabSwitchClass {
+  private static instans: tabSwitchClass;
+
   tabTempElement: HTMLTemplateElement;
   editElement: HTMLElement;
   outputElement: HTMLElement;
@@ -14,32 +16,37 @@ class tabSwitchClass {
 
     this.outputElement = document.getElementById("app")! as HTMLDivElement;
 
-    this.changeSwitchTab = this.editElement.querySelectorAll("li");
+    this.changeSwitchTab = this.editElement.querySelectorAll(".list-tab li");
     this.changeSwitchContent = this.editElement.querySelectorAll(
       ".tab-content"
     );
 
     this.changeSwitchTab.forEach((tabSwitch, index) => {
       // tabSwitch.addEventListener("click", {indexNum: index, handleEvent: this.tabChange});
-      tabSwitch.addEventListener("click", this.tabChange.bind(this));
+      tabSwitch.addEventListener("click", this.tabChange);
     });
 
     // console.log(this.changeSwitchContent);
     this.attach();
   }
 
+  static getInstance(tabClass: string) {
+    if (!this.instans) {
+      this.instans = new tabSwitchClass(tabClass);
+    }
+    return this.instans;
+  }
+
   tabChange(event: Event) {
-    // console.log("tabSwitch", event.currentTarget);
-    // console.log(this.changeSwitchContent);
-    this.changeSwitchTab.forEach((elem, index) => {
-      if (elem === event.currentTarget) {
-        elem.classList.add("active");
-        this.changeSwitchContent[index].classList.add("active");
-      } else {
-        elem.classList.remove("active");
-        this.changeSwitchContent[index].classList.remove("active");
-      }
+    tabSwitctCl.changeSwitchTab.forEach((elem, index) => {
+      elem.classList.remove("active");
+      tabSwitctCl.changeSwitchContent[index].classList.remove("active");
     });
+    event.currentTarget.classList.add("active");
+
+    const arrayTabs = Array.prototype.slice.call(tabSwitctCl.changeSwitchTab);
+    const index = arrayTabs.indexOf(this);
+    tabSwitctCl.changeSwitchContent[index].classList.add("active");
   }
 
   attach() {
@@ -47,4 +54,4 @@ class tabSwitchClass {
   }
 }
 
-new tabSwitchClass("wrap-tab");
+const tabSwitctCl = tabSwitchClass.getInstance(".wrap-tab");
