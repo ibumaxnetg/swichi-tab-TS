@@ -1,4 +1,4 @@
-class tabSwitchClass {
+export class tabSwitchClass {
   tabTempElement: HTMLElement;
   editElement: HTMLElement;
   outputElement: HTMLElement;
