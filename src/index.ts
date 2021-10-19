@@ -1,4 +1,8 @@
+import { GetQueryObject, AreaCode } from "./types/Types";
+
 export class tabSwitchClass {
+  queryObj: GetQueryObject = {};
+
   tabTempElement: HTMLElement;
   editElement: HTMLElement;
   outputElement: HTMLElement;
@@ -27,10 +31,46 @@ export class tabSwitchClass {
     });
 
     // console.log(this.changeSwitchContent);
+    this.getQuery();
+    this.initTab();
     this.attach();
   }
 
-  tabChange(event: Event) {
+  private getQuery() {
+    const queryString: string[] = window.location.search
+      .substring(1)
+      .split("&");
+    // console.log(queryString);
+
+    if (queryString[0] !== "") {
+      for (const qryStr of queryString) {
+        const kv = qryStr.split("=");
+        this.queryObj[kv[0]] = kv[1];
+      }
+      // console.log("getQuery", this.queryObj.id);
+    }
+    // アドレスバー書き換え
+    // window.history.replaceState("", "", "./firetest.html");
+  }
+
+  private initTab() {
+    this.changeSwitchTab.forEach((elem, index) => {
+      console.log(
+        "AreaCode." + this.queryObj.areacode,
+        elem.textContent,
+        AreaCode.tokyo
+      );
+      if (index === AreaCode[this.queryObj.areacode]) {
+        elem.classList.add("active");
+        this.changeSwitchContent[index].classList.add("active");
+      } else {
+        elem.classList.remove("active");
+        this.changeSwitchContent[index].classList.remove("active");
+      }
+    });
+  }
+
+  private tabChange(event: Event) {
     // console.log("tabSwitch", event.currentTarget);
     // console.log(this.changeSwitchContent);
     this.changeSwitchTab.forEach((elem, index) => {
@@ -44,10 +84,10 @@ export class tabSwitchClass {
     });
   }
 
-  attach() {
+  private attach() {
     this.tabTempElement.innerHTML = "";
     this.outputElement.insertAdjacentElement("afterbegin", this.editElement);
-    console.log(this.outputElement);
+    // console.log(this.outputElement);
   }
 }
 
