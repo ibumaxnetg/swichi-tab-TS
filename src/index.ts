@@ -54,13 +54,10 @@ export class tabSwitchClass {
   }
 
   private initTab() {
+    const areaCode: number = Number(`${AreaCode[this.queryObj.areacode]}`);
     this.changeSwitchTab.forEach((elem, index) => {
-      console.log(
-        "AreaCode." + this.queryObj.areacode,
-        elem.textContent,
-        AreaCode.tokyo
-      );
-      if (index === AreaCode[this.queryObj.areacode]) {
+      // console.log(areaCode, Number(`${AreaCode[this.queryObj.areacode]}`));
+      if (index === areaCode) {
         elem.classList.add("active");
         this.changeSwitchContent[index].classList.add("active");
       } else {
