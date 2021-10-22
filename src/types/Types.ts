@@ -7,5 +7,7 @@ export enum AreaCode {
   kanagawa,
   saitama,
   chiba,
-  ibaraki
+  ibaraki,
+  tochigi,
+  gunma,
 }
