@@ -47,16 +47,23 @@ export class tabSwitchClass {
         const kv = qryStr.split("=");
         this.queryObj[kv[0]] = kv[1];
       }
-      // console.log("getQuery", this.queryObj.id);
+      // console.log("getQuery", this.queryObj.areacode);
     }
     // アドレスバー書き換え
     // window.history.replaceState("", "", "./firetest.html");
   }
 
   private initTab() {
-    const areaCode: number = Number(`${AreaCode[this.queryObj.areacode]}`);
+    const areaCode: number =
+      this.queryObj !== undefined && this.queryObj.areacode !== undefined
+        ? Number(`${AreaCode[this.queryObj.areacode]}`)
+        : AreaCode.tokyo;
     this.changeSwitchTab.forEach((elem, index) => {
-      // console.log(areaCode, Number(`${AreaCode[this.queryObj.areacode]}`));
+      // console.log(
+      //   areaCode,
+      //   `${AreaCode[this.queryObj.areacode]}`,
+      //   this.queryObj.areacode
+      // );
       if (index === areaCode) {
         elem.classList.add("active");
         this.changeSwitchContent[index].classList.add("active");
